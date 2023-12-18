@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0
-pragma solidity 0.7.5;
+pragma solidity ^0.8.0;
 pragma abicoder v2;
 
 // simplified interface to expose functions added events for tests

@@ -3,7 +3,7 @@
 // File @aave/aave-token/contracts/open-zeppelin/Context.sol@v1.0.4
 
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.7.5;
+pragma solidity ^0.8.0;
 pragma experimental ABIEncoderV2;
 
 // File contracts/lib/Context.sol
