@@ -21,7 +21,7 @@ pragma experimental ABIEncoderV2;
  */
 abstract contract Context {
   function _msgSender() internal view virtual returns (address payable) {
-    return msg.sender;
+    return payable(msg.sender);
   }
 
   function _msgData() internal view virtual returns (bytes memory) {
@@ -1900,7 +1900,7 @@ contract StakedTokenBptRev2 is
 
     // caching the aave governance address to avoid multiple state loads
     ITransferHook aaveGovernance = _aaveGovernance;
-    if (aaveGovernance != ITransferHook(0)) {
+    if (address(aaveGovernance) != ITransferHook(0)) {
       aaveGovernance.onTransfer(from, to, amount);
     }
   }

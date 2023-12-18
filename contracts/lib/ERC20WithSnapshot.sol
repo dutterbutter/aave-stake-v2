@@ -97,7 +97,7 @@ contract ERC20WithSnapshot is ERC20 {
 
     // caching the aave governance address to avoid multiple state loads
     ITransferHook aaveGovernance = _aaveGovernance;
-    if (aaveGovernance != ITransferHook(0)) {
+    if (address(aaveGovernance) != ITransferHook(0)) {
       aaveGovernance.onTransfer(from, to, amount);
     }
   }
